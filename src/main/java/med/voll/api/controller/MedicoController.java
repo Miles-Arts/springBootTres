@@ -1,5 +1,6 @@
 package med.voll.api.controller;
 
+import med.voll.api.medico.DatosRegistroMedico;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,12 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class MedicoController {
 
     @PostMapping
-    public void resgitrarMedico(@RequestBody String parametro) {
+    public void resgitrarMedico(@RequestBody DatosRegistroMedico datosRegistroMedico) {
 
-        System.out.println("El request llega correctamente");
+        System.out.println(datosRegistroMedico);
 
-        System.out.println(parametro);
-       // System.out.println(nombre);
 
     }
 
