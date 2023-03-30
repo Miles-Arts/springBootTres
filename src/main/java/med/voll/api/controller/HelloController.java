@@ -12,7 +12,7 @@ public class HelloController {
     @GetMapping
     public String helloWorld() {
 
-        return "Hello World from Europa and Colombia";
+        return "Hello World from Europa and Colombia Tierra querida";
 
     }
 
