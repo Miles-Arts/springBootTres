@@ -16,6 +16,7 @@ public class MedicoController {
         System.out.println("El request llega correctamente");
 
         System.out.println(parametro);
+       // System.out.println(nombre);
 
     }
 
