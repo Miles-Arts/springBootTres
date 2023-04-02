@@ -4,6 +4,7 @@ import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import med.voll.api.medico.DatosRegistroMedico;
 
 @Embeddable
 @Getter
@@ -12,7 +13,7 @@ import lombok.NoArgsConstructor;
 public class Direccion {
 
     private String calle;
-    private Integer numero;
+    private String numero;
     private String complemento;
     private String ciudad;
     private String distrito;

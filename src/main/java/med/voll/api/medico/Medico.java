@@ -5,9 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import med.voll.api.direccion.DatosDireccion;
 import med.voll.api.direccion.Direccion;
-import org.springframework.web.bind.annotation.RestController;
 
 @Table(name = "medicos")
 @Entity(name = "Medico")
@@ -30,12 +28,12 @@ public class Medico {
     @Embedded
     private Direccion direccion;
 
-
     public Medico(DatosRegistroMedico datosRegistroMedico) {
 
         this.nombre = datosRegistroMedico.nombre();
         this.email = datosRegistroMedico.email();
         this.documento = datosRegistroMedico.documento();
         this.especialidad = datosRegistroMedico.especialidad();
+        this.direccion = new Direccion(datosRegistroMedico.direccion());
     }
 }

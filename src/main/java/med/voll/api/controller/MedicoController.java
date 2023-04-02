@@ -11,20 +11,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/medicos")
-
 public class MedicoController {
 
     @Autowired
     private MedicoRepository medicoRepository;
 
 
-    }
-
     @PostMapping
     public void resgitrarMedico(@RequestBody DatosRegistroMedico datosRegistroMedico) {
 
         medicoRepository.save(new Medico(datosRegistroMedico));
-        //System.out.println(datosRegistroMedico);
 
 
     }
