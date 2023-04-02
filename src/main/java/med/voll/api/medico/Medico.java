@@ -31,4 +31,11 @@ public class Medico {
     private Direccion direccion;
 
 
+    public Medico(DatosRegistroMedico datosRegistroMedico) {
+
+        this.nombre = datosRegistroMedico.nombre();
+        this.email = datosRegistroMedico.email();
+        this.documento = datosRegistroMedico.documento();
+        this.especialidad = datosRegistroMedico.especialidad();
+    }
 }
