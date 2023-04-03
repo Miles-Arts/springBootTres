@@ -8,7 +8,7 @@ public record DatosRegistroMedico(
         String documento,
         Especialidad especialidad,
 
-        DatosDireccion datosdireccion
+        DatosDireccion datosDireccion
 ) {
 
 }

@@ -18,11 +18,10 @@ public class MedicoController {
 
 
     @PostMapping
-    public void resgitrarMedico(@RequestBody DatosRegistroMedico datosRegistroMedico) {
+    public void registrarMedico(@RequestBody DatosRegistroMedico datosRegistroMedico) {
 
         medicoRepository.save(new Medico(datosRegistroMedico));
 
 
     }
-
 }
