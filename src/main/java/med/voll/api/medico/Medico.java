@@ -37,6 +37,7 @@ public class Medico {
         this.email = datosRegistroMedico.email();
         this.documento = datosRegistroMedico.documento();
         this.especialidad = datosRegistroMedico.especialidad();
-        this.direccion = new Direccion(datosRegistroMedico.direccion());
+        this.direccion = new Direccion(datosRegistroMedico.datosDireccion());
+
     }
 }
