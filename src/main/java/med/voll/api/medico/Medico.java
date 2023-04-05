@@ -6,7 +6,6 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import med.voll.api.direccion.Direccion;
-import org.jetbrains.annotations.NotNull;
 
 @Table(name = "medicos")
 @Entity(name = "Medico")
@@ -21,6 +20,8 @@ public class Medico {
     private Long id;
     private String nombre;
     private String email;
+
+    private String telefono;
 
     //private String telefono;
     private String documento;
@@ -37,6 +38,7 @@ public class Medico {
         this.email = datosRegistroMedico.email();
         this.documento = datosRegistroMedico.documento();
         this.especialidad = datosRegistroMedico.especialidad();
+        this.telefono = datosRegistroMedico.telefono();
         this.direccion = new Direccion(datosRegistroMedico.direccion());
 
     }

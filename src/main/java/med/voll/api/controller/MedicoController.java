@@ -19,7 +19,7 @@ public class MedicoController {
 
 
     @PostMapping
-    public void registrarMedico(@RequestBody @Valid DatosRegistroMedico datosRegistroMedico) {
+    public void registrarMedico(@Valid @RequestBody  DatosRegistroMedico datosRegistroMedico) {
 
         medicoRepository.save(new Medico(datosRegistroMedico));
 
