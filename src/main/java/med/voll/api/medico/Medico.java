@@ -23,7 +23,6 @@ public class Medico {
 
     private String telefono;
 
-    //private String telefono;
     private String documento;
 
     @Enumerated(EnumType.STRING)
@@ -37,8 +36,8 @@ public class Medico {
         this.nombre = datosRegistroMedico.nombre();
         this.email = datosRegistroMedico.email();
         this.documento = datosRegistroMedico.documento();
-        this.especialidad = datosRegistroMedico.especialidad();
         this.telefono = datosRegistroMedico.telefono();
+        this.especialidad = datosRegistroMedico.especialidad();
         this.direccion = new Direccion(datosRegistroMedico.direccion());
 
     }
