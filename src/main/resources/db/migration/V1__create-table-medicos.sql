@@ -11,3 +11,5 @@ create table medicos(
     ciudad varchar(100) not null,
     primary key(id)
 );
+
+delete from flyway_schema_history where success = 0;
