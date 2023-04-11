@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,7 +20,7 @@ public class MedicoController {
 
 
     @PostMapping
-    public void registrarMedico(@Valid  @RequestBody  DatosRegistroMedico datosRegistroMedico) {
+    public void registrarMedico(@RequestBody @Valid  DatosRegistroMedico datosRegistroMedico) {
 
         medicoRepository.save(new Medico(datosRegistroMedico));
     }
@@ -31,8 +32,16 @@ public class MedicoController {
     }
 
     @PutMapping
-    public void actualizarMedico(DatosActualizarMedico datosActualizarMedico) {
+    @Transactional
+    public void actualizarMedico(@RequestBody @Valid DatosActualizarMedico datosActualizarMedico) {
        Medico medico = medicoRepository.getReferenceById(datosActualizarMedico.id());
+
+       medico.actualizarDatos(datosActualizarMedico);
+
+    }
+
+    @DeleteMapping
+    public void eliminarMedico() {
 
     }
 }
