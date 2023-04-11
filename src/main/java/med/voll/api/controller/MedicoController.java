@@ -40,8 +40,14 @@ public class MedicoController {
 
     }
 
-    @DeleteMapping
-    public void eliminarMedico() {
+    //@DeleteMapping("/7") //Dete fijo
+    @DeleteMapping("/{id}")
+    @Transactional
+    public void eliminarMedico(@PathVariable Long id) {
+
+        Medico medico = medicoRepository.getReferenceById(id);
+
+        medicoRepository.delete(medico);
 
     }
 }
